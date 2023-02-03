@@ -7,6 +7,13 @@ weight: 1
 
 In alphabetical order below.
 
+## [Accera](https://github.com/microsoft/Accera)
+
+Accera is a compiler that enables you to experiment with loop optimizations without
+hand-writing Assembly code. With Accera, these problems and impediments can be
+addressed in an optimized way. It is available as a Python library and supports
+cross-compiling to a wide range of processor targets.
+
 ## [Beaver](https://github.com/beaver-lodge/beaver)
 
 Beaver is an MLIR frondend in Elixir and Zig.
@@ -91,6 +98,10 @@ IBM Power Systems, and IBM System Z.
 See also this paper: [Compiling ONNX Neural Network Models Using
 MLIR](https://arxiv.org/abs/2008.08272).
 
+## [OpenXLA](https://github.com/openxla)
+
+A community-driven, open source ML compiler ecosystem, using the best of XLA & MLIR.
+
 ## [PlaidML](https://github.com/plaidml/plaidml)
 
 PlaidML is a tensor compiler that facilitates reusable and performance portable
@@ -131,6 +142,11 @@ asynchronous runtime system.
 
 MLIR is used as a Graph Transformation framework and the foundation for
 building many tools (XLA, TFLite converter, quantization, ...).
+
+## [SOPHGO TPU-MLIR](https://github.com/sophgo/tpu-mlir)
+
+TPU-MLIR is an open-source machine-learning compiler based on MLIR for
+SOPHGO TPU. https://arxiv.org/abs/2210.15016.
 
 ## [Torch-MLIR](https://github.com/llvm/torch-mlir)
 
