@@ -25,6 +25,8 @@ weight: 1
 
 ### About MLIR and MLIR Components
 
+* [How to Build your own MLIR Dialect](https://fosdem.org/2023/schedule/event/mlirdialect/) ; Marius Brehler @ [FOSDEM 2023](https://fosdem.org/2023/)
+
 * [Compiler Support for Sparse Tensor Computations in MLIR](https://youtu.be/x-nHc3hBxHM) ; [Aart Bik](https://www.aartbik.com/) @ [2021 LLVM Developers' Meeting](https://llvm.swoogo.com/2021devmtg/) November 16-19, 2021.
 
 * [MLIR: Scaling Compiler Infrastructure for Domain Specific
@@ -68,18 +70,31 @@ weight: 1
 * Compiling Ruby with MLIR ; [recording](https://youtu.be/Cl5SgDxvZ8w) ; Alex Denisov @ [LLVM Social Berlin #20](https://www.meetup.com/llvm-social-berlin/events/287586655/)
 
 
-
 ## Open design meeting presentations
 
 We host a **weekly public meeting** about MLIR and the ecosystem. If you’d like
 to discuss a particular topic or have questions, please add it to the
-[agenda doc](https://docs.google.com/document/d/1y_9f1AbfgcoVdJh4_aM6-BaSHvrHl8zuA5G4jv_94K8/edit#).
-Details on how to join the meeting are in the agenda doc, you can get a Google
-calendar invite by joining
-[this googlegroup](https://groups.google.com/a/tensorflow.org/g/mlir).
+[agenda doc](https://docs.google.com/document/d/1y2YlcOVMPocQjSFi3X6gYGRjA0onyqr41ilXji10phw/edit#).
+
+The meetings are announced on [Discourse](https://discourse.llvm.org/c/mlir/mlir-announcements/44),
+subscribing to this category is the best way to stay informed. You can also register
+to [this public calendar](https://calendar.google.com/calendar/u/0?cid=N2EzMDU3NTBjMjkzYWU5MTY5NGNlMmQ3YjJlN2JjNWEyYjViNjg1NTRmODcxOWZiOTU1MmIzNGQxYjkwNGJkZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t). 
+
 
 ### About MLIR and MLIR Components
 
+* 2023-03-23: Nelli, a lightweight, Pythonic, frontend for MLIR
+[slides](/OpenMeetings/2023-03-23-Nelli.pdf) -
+[recording](https://youtu.be/Z8knnMYRPx0)
+* 2023-03-09: Integrating Convolution Optimization into MLIR to Improve Performance Beyond Im2Col+GEMM
+[slides](/OpenMeetings/2023-03-09-Convolution-Optimization.pdf) -
+[recording](https://youtu.be/4qJanPAMUBs)
+* 2023-02-23: MLIR Actions: Tracing and Debugging MLIR-based Compilers
+[slides](/OpenMeetings/2023-02-23-Actions.pdf) -
+[recording](https://youtu.be/ayQSyekVa3c)
+* 2023-02-09: Deep Dive on MLIR Internals, Operation&Attribute, towards Properties
+[slides](/OpenMeetings/2023-02-09-Properties.pdf) -
+[recording](https://youtu.be/7ofnlCFzlqg)
 * 2023-01-26: Controllable Transformations in MLIR ;
 [slides](/OpenMeetings/2023-01-26-Controllable-transformations.pdf) -
 [recording](https://youtu.be/j0xAlkvvEEg)
@@ -224,6 +239,12 @@ recording [part 1](https://drive.google.com/a/google.com/file/d/1JvirzO_LgUTacs0
 
 ### Using MLIR
 
+* 2023-05-04: Catalyst, an AOT/JIT compiler for hybrid quantum programs
+[slides](/OpenMeetings/2023-05-04-Catalyst-compiler-for-hybrid-quantum-programs.pdf)
+[recording](https://youtu.be/VY-Rsi5SFB8)
+* 2023-03-30: Representing dataflow with MLIR ;
+[slides](/OpenMeetings/2023-03-30-Representing-Dataflow-With-MLIR.pdf) -
+[recording](https://youtu.be/kEcLBhbncEg)
 * 2022-12-15: Embedded reactive programming in MLIR ;
 [slides](/OpenMeetings/2022-12-15-Reactive-Programming.pdf) -
 [recording](https://youtu.be/euws5GvM3oo)
@@ -323,7 +344,8 @@ Architectures ;
 
 ## Upcoming talks or presentations
 
-The schedule for the open design meetings and upcoming presentations can be found on the Agenda document of the [SIG](https://github.com/tensorflow/community/blob/master/sigs/mlir/CHARTER.md). Additional talks or conferences of interest will be added below.
+The schedule for the open design meetings and upcoming presentations can be found in the [agenda doc](https://docs.google.com/document/d/1y_9f1AbfgcoVdJh4_aM6-BaSHvrHl8zuA5G4jv_94K8/edit#).
+
 
 ## Past conferences and workshops
 

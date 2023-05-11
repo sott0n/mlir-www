@@ -1,6 +1,6 @@
 ---
 title: "Users of MLIR"
-date: 2019-11-29T15:26:15Z
+date: 2023-05-04T21:00:54Z
 draft: false
 weight: 1
 ---
@@ -19,6 +19,20 @@ cross-compiling to a wide range of processor targets.
 Beaver is an MLIR frondend in Elixir and Zig.
 Powered by Elixir's composable modularity and meta-programming features,
 Beaver provides a simple, intuitive, and extensible interface for MLIR.
+
+## [Catalyst](https://github.com/PennyLaneAI/catalyst)
+
+Catalyst is an AOT/JIT compiler for [PennyLane](https://pennylane.ai/) that
+accelerates hybrid quantum programs, with:
+
+- full auto-differentiation support, via custom quantum gradients
+  and [Enzyme](https://github.com/EnzymeAD/Enzyme)-based backpropagation,
+- a dynamic quantum programming model,
+- and integration into the Python ML ecosytem.
+
+Catalyst also comes with the [Lightning](https://github.com/PennyLaneAI/pennylane-lightning/)
+high performance simulator by default, but supports an extensible backend system that is
+constantly evolving, aiming to deliver execution on heterogenous architectures with GPUs and QPUs.
 
 ## [CIRCT](https://github.com/llvm/circt): Circuit IR Compilers and Tools
 
@@ -44,6 +58,12 @@ the GPU (via Vulkan/SPIR-V), CPU or some combination. It also aims to
 interoperate seamlessly with existing users of Vulkan APIs, specifically
 focused on games and rendering pipelines.
 
+## [LingoDB](https://github.com/lingo-db/lingo-db)
+
+LingoDB is a new analytical database system that blurs the lines between databases
+and compilers.
+
+
 ## [Lumen](https://github.com/lumen/lumen): A new compiler and runtime for BEAM languages
 
 Lumen is not only a compiler, but a runtime as well. It consists of two parts:
@@ -66,6 +86,14 @@ the device, including processors, stream switches, TileDMA and ShimDMA blocks.
 Backend code generation is included, targetting the LibXAIE library, along with
 some higher-level abstractions enabling higher-level design 
 
+## [MLIR-DaCe](https://github.com/spcl/mlir-dace): Data-Centric MLIR Dialect
+
+MLIR-DaCe is a project aiming to bridge the gap between control-centric and 
+data-centric intermediate representations. By bridging these two groups of IRs, 
+it allows the combination of control-centric and data-centric optimizations in 
+optimization pipelines. In order to achieve this, MLIR-DaCe provides a data-centric 
+dialect in MLIR to connect the MLIR and DaCe frameworks.
+
 ## [MLIR-EmitC](https://github.com/iml130/mlir-emitc)
 
 MLIR-EmitC provides a way to translate ML models into C++ code. The repository
@@ -78,6 +106,15 @@ The latter is used to generate calls to a reference implementation.
 The [EmitC](https://mlir.llvm.org/docs/Dialects/EmitC/) dialect itself, as well
 as the C++ emitter, are part of MLIR core and are no longer provided as part of
 the MLIR-EmitC repository.
+
+## [Mojo](https://docs.modular.com/mojo/)
+
+Mojo is a new programming language that bridges the gap between research and
+production by combining the best of Python syntax with systems programming and
+metaprogramming, all leveraging the MLIR ecosystem.
+It aims to be a strict superset of Python (i.e. be compatible with existing
+programs) and to embrace the CPython immediately for long-tail ecosystem
+enablement.
 
 ## [Nod Distributed Runtime](https://nod.ai/project/distributedruntime/): Asynchronous fine-grained op-level parallel runtime
 
