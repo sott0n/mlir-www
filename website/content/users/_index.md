@@ -16,7 +16,7 @@ cross-compiling to a wide range of processor targets.
 
 ## [Beaver](https://github.com/beaver-lodge/beaver)
 
-Beaver is an MLIR frondend in Elixir and Zig.
+Beaver is an MLIR frontend in Elixir and Zig.
 Powered by Elixir's composable modularity and meta-programming features,
 Beaver provides a simple, intuitive, and extensible interface for MLIR.
 
@@ -64,17 +64,17 @@ LingoDB is a new analytical database system that blurs the lines between databas
 and compilers.
 
 
-## [Lumen](https://github.com/lumen/lumen): A new compiler and runtime for BEAM languages
+## [Firefly](https://github.com/GetFirefly/firefly): A new compiler and runtime for BEAM languages
 
-Lumen is not only a compiler, but a runtime as well. It consists of two parts:
+Firefly is not only a compiler, but a runtime as well. It consists of two parts:
 
 - A compiler for Erlang to native code for a given target (x86, ARM, WebAssembly)
 - An Erlang runtime, implemented in Rust, which provides the core functionality
   needed to implement OTP
 
-The primary motivator for Lumen's development was the ability to compile Elixir
+The primary motivator for Firefly's development was the ability to compile Elixir
 applications that could target WebAssembly, enabling use of Elixir as a language
-for frontend development. It is also possible to use Lumen to target other
+for frontend development. It is also possible to use Firefly to target other
 platforms as well, by producing self-contained executables on platforms such as
 x86.
 
@@ -84,14 +84,14 @@ MLIR-AIE is a toolchain providing low-level device configuration for Versal
 AIEngine-based devices. Support is provided to target the AIEngine portion of
 the device, including processors, stream switches, TileDMA and ShimDMA blocks.
 Backend code generation is included, targetting the LibXAIE library, along with
-some higher-level abstractions enabling higher-level design 
+some higher-level abstractions enabling higher-level design.
 
 ## [MLIR-DaCe](https://github.com/spcl/mlir-dace): Data-Centric MLIR Dialect
 
-MLIR-DaCe is a project aiming to bridge the gap between control-centric and 
-data-centric intermediate representations. By bridging these two groups of IRs, 
-it allows the combination of control-centric and data-centric optimizations in 
-optimization pipelines. In order to achieve this, MLIR-DaCe provides a data-centric 
+MLIR-DaCe is a project aiming to bridge the gap between control-centric and
+data-centric intermediate representations. By bridging these two groups of IRs,
+it allows the combination of control-centric and data-centric optimizations in
+optimization pipelines. In order to achieve this, MLIR-DaCe provides a data-centric
 dialect in MLIR to connect the MLIR and DaCe frameworks.
 
 ## [MLIR-EmitC](https://github.com/iml130/mlir-emitc)
@@ -145,6 +145,13 @@ PlaidML is a tensor compiler that facilitates reusable and performance portable
 ML models across various hardware targets including CPUs, GPUs, and
 accelerators.
 
+## [PolyBlocks](https://www.polymagelabs.com/technology/#polyblocks): An MLIR-based JIT and AOT compiler
+
+PolyBlocks is a high-performance MLIR-based end-to-end compiler for DL and
+non-DL computations. It can perform both JIT and AOT compilation. Its compiler
+engine is aimed at being fully automatic, modular, analytical model-driven, and
+fully code generating (no reliance on vendor/HPC libraries).
+
 ## [Polygeist](https://github.com/llvm/Polygeist): C/C++ frontend and optimizations for MLIR
 
 Polygeist is a C/C++ frontend for MLIR which preserves high-level structure
@@ -160,7 +167,7 @@ and the GPU Polygeist paper
 
 Pylir aims to be an optimizing Ahead-of-Time Python Compiler with high language
 conformance. It uses MLIR Dialects for the task of high level, language specific
-optimizations as well as LLVM for code genereation and garbage collector 
+optimizations as well as LLVM for code genereation and garbage collector
 support.
 
 ## [RISE](https://rise-lang.org/)
