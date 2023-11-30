@@ -20,6 +20,13 @@ Beaver is an MLIR frontend in Elixir and Zig.
 Powered by Elixir's composable modularity and meta-programming features,
 Beaver provides a simple, intuitive, and extensible interface for MLIR.
 
+## [Bᴛᴏʀ2ᴍʟɪʀ](https://github.com/jetafese/btor2mlir): A Format and Toolchain for Hardware Verification
+
+Bᴛᴏʀ2ᴍʟɪʀ applies MLIR to the domain of hardware verification by offering a clean way to take advantage of a format's
+strengths. For example, we support the use of software verification methods for hardware 
+verification problems represented in the Bᴛᴏʀ2 format. The project aims to spur and support research 
+in the formal verification domain, and has been shown to be competitive with existing methods. 
+
 ## [Catalyst](https://github.com/PennyLaneAI/catalyst)
 
 Catalyst is an AOT/JIT compiler for [PennyLane](https://pennylane.ai/) that
@@ -99,7 +106,7 @@ dialect in MLIR to connect the MLIR and DaCe frameworks.
 MLIR-EmitC provides a way to translate ML models into C++ code. The repository
 contains scripts and tools to translate Keras and TensorFlow models into the
 [TOSA](https://mlir.llvm.org/docs/Dialects/TOSA/) and
-[MHLO](https://github.com/tensorflow/mlir-hlo) dialect and to convert those to
+[StableHLO](https://github.com/openxla/stablehlo/) dialect and to convert those to
 [EmitC](https://mlir.llvm.org/docs/Dialects/EmitC/).
 The latter is used to generate calls to a reference implementation.
 

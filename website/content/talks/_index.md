@@ -83,6 +83,24 @@ to [this public calendar](https://calendar.google.com/calendar/u/0?cid=N2EzMDU3N
 
 ### About MLIR and MLIR Components
 
+* 2023-11-16: Targeting H100 with NVGPU and NVVM Dialects
+[slides](/OpenMeetings/2023-11-16-Targeting_H100_in_MLIR_ODM.pdf) -
+[recording](https://youtu.be/xNe9fPvU7-U)
+* 2023-11-02: A MPI Dialect Proposal
+[slides](/OpenMeetings/2023-11-02-MPI-Dialect.pdf) -
+[recording](https://youtu.be/VB6Ec3RnMEE)
+* 2023-10-26: A Polynomial Dialect Proposal
+[slides](/OpenMeetings/2023-10-26-Polynomial-dialect.pdf) -
+[recording](https://youtu.be/wsKP-guEB5s)
+* 2023-09-28: Sharding Framework for Device Mesh
+[slides](/OpenMeetings/2023-09-28-Sharding-Framework-Design-for-Device-Mesh.pdf) -
+[recording](https://youtu.be/vL6VNbJkc6Q)
+* 2023-07-13: mlir-query: Tool to query MLIR IR dynamically
+[slides](/OpenMeetings/2023-07-13-MLIR-query.pdf) -
+[recording](https://youtu.be/eFNS4ubazO4)
+* 2023-07-06: RFC on Pattern Matching for Library and Acceleration Instruction Rewriting
+[slides](/OpenMeetings/2023-07-06-SMR.pdf) -
+[recording](https://youtu.be/0Uc4RTJ8QI4)
 * 2023-06-22: Targeting ARM SME from MLIR and SME Dialect
 [slides part 1](/OpenMeetings/2023-06-22-Targeting-SME.pdf) -
 [slides part 2](/OpenMeetings/2023-06-22-SME-Dialect.pdf) -

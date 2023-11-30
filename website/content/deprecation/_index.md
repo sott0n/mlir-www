@@ -22,17 +22,26 @@ methods in the future.
 
 ### Port uses of LLVM Dialect to opaque pointers
 
-LLVM 17 has stopped officially supporting typed pointers and MLIRs LLVM Dialect 
-will follow suit soon by removing them. Users of the LLVM Dialect must switch
-to using opaque pointers and stop relying on pointers having an element type.
-See the initial [PSA](https://discourse.llvm.org/t/psa-in-tree-conversion-passes-can-now-be-used-with-llvm-opaque-pointers-please-switch-your-downstream-projects/68738)
-post for precise instructions and timeline. 
+LLVM 17 has stopped officially supporting typed pointers, and MLIRs LLVM Dialect 
+is now in the process of dropping the support as well. This was announced back
+in February 2023 ([PSA](https://discourse.llvm.org/t/psa-in-tree-conversion-passes-can-now-be-used-with-llvm-opaque-pointers-please-switch-your-downstream-projects/68738))
+, and now the final steps, i.e., removing the typed pointers, have started
+([PSA](https://discourse.llvm.org/t/psa-removal-of-typed-pointers-from-the-llvm-dialect/74502)).
+If you are still targeting LLVM dialect with typed pointers, an update to
+support opaque pointers will be necessary.
 
 ## On-going Refactoring & large changes
 
 # Past Deprecation and Refactoring
 
 ## LLVM 17
+
+### "Promised Interface" and the need to explicitly register InlinerExtension for the `FuncDialect`.
+
+We're tightening the contract around injecting interfaces into the system externally, starting with
+`DialectInterface`. As an important visible change at the moment is that if you're using the inliner
+with the `FuncDialect`, you need to call `func::registerAllExtensions(registry);` when setting up
+your `MLIRContext`.
 
 ### Properties && changes to the generic printing format
 
@@ -61,3 +70,17 @@ If your `mlir-opt`-like tool is using the
 otherwise, see the
 [Discussion on Discourse](https://discourse.llvm.org/t/psa-migrating-mlir-opt-like-tools-to-use-mliroptmainconfig/68991)
 
+### Deprecation of `gpu-to-(cubin|hsaco)` in favor of GPU compilation attributes
+
+[GPU compilation attributes](https://mlir.llvm.org/docs/Dialects/GPU/#gpu-compilation) are a completely new mechanism for handling the compilation
+of GPU modules down to binary or other formats in an extensible way. This mechanism lifts
+many current restrictions the GPU serialization passes had, like being present only if the
+CUDA driver is there or not linking to LibDevice.
+
+One key difference is the usage of `ptxas` or the `nvptxcompiler` library for compiling PTX
+to binary; hence the CUDATollkit is required for generating binaries.
+
+For these attributes to work correctly, making registration calls to `registerNVVMTargetInterfaceExternalModels`,
+`registerROCDLTargetInterfaceExternalModels` and `registerOffloadingLLVMTranslationInterfaceExternalModels` are necessary.
+
+The passes `gpu-to-(cubin|hsaco)` will be removed in a future release.

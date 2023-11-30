@@ -44,12 +44,27 @@ publication.
 	
 On general basis, there is never a reason why a small feature is not available in MLIR other than nobody needed it enough to implement it. Consider submitting a patch. For larger features and dialects, follow the [request-for-comments](https://mlir.llvm.org/getting_started/DeveloperGuide/#guidelines-on-contributing-a-new-dialect-or-important-components) process.
 
+## MLIR is too heavy framework, should I just reimplement my own compiler from scratch?
+
+Maybe: it is hard to tell as it depends on your requirements, even C++ may already be too
+large for some micro-controllers. In our experience most projects ends up growing beyond
+what their original author intended, and reimplementing the features you would get from
+MLIR would also have a footprint. MLIR footprint is representative of the features it
+provides. More importantly we have a "you don't pay for what you don't use" approach:
+MLIR is very modular and you can link a binary with a very minimal set of libraries.
+If you use just the core IR, some pieces of the infrastructure, and a few dialects
+you should expect a few MBs. We have
+[three examples]([https://github.com/llvm/llvm-project/commit/e7f8b459532de54a8606c7d387ded7ccf5108cb5](https://github.com/llvm/llvm-project/tree/main/mlir/examples/minimal-opt)
+in the repo showing some small possible configurations of MLIR, showing that the
+core of MLIR can take around 1MB.
+
 ## What is the difference between the Tensor and Vector types?
 
 1) Conceptual: vectors are meant to and occur in lower level dialects - often where you expect hardware to have registers of that size. Tensors model higher-level "closer to the source" abstract representation. This is reflected in the abstraction modeled by the operations from the [`vector` dialect](https://mlir.llvm.org/docs/Dialects/Vector/), while Tensors would be more naturally present in the operations of the [`linalg` dialect](https://mlir.llvm.org/docs/Dialects/Linalg/).
 2) Tensors can be dynamically shaped, unranked, or have 0 dimensions ; but Vectors can't be.
 3) You can have a memref (a buffer in memory) containing Vectors but you can't have a memref of a tensor type.
 4) The set of allowed element types is different: the Tensor type isn't limited while Vector is limited to float and integer types.
+5) Tensors accept an optional "encoding" attribute, vector don't at the moment.
 
 ## Registered, loaded, dependent: what's up with Dialects management?
 
