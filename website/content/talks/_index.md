@@ -78,11 +78,14 @@ to discuss a particular topic or have questions, please add it to the
 
 The meetings are announced on [Discourse](https://discourse.llvm.org/c/mlir/mlir-announcements/44),
 subscribing to this category is the best way to stay informed. You can also register
-to [this public calendar](https://calendar.google.com/calendar/u/0?cid=N2EzMDU3NTBjMjkzYWU5MTY5NGNlMmQ3YjJlN2JjNWEyYjViNjg1NTRmODcxOWZiOTU1MmIzNGQxYjkwNGJkZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t). 
+to [this public calendar](https://calendar.google.com/calendar/u/0?cid=N2EzMDU3NTBjMjkzYWU5MTY5NGNlMmQ3YjJlN2JjNWEyYjViNjg1NTRmODcxOWZiOTU1MmIzNGQxYjkwNGJkZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
 
 
 ### About MLIR and MLIR Components
 
+* 2023-12-14: Vector dialect, reshape, and handling of unit dimensions
+[slides](/OpenMeetings/2023-12-14-Vector-reshapes.pdf) -
+[recording](https://youtu.be/csWPOQfgLMo)
 * 2023-11-16: Targeting H100 with NVGPU and NVVM Dialects
 [slides](/OpenMeetings/2023-11-16-Targeting_H100_in_MLIR_ODM.pdf) -
 [recording](https://youtu.be/xNe9fPvU7-U)
@@ -264,6 +267,9 @@ recording [part 1](https://drive.google.com/a/google.com/file/d/1JvirzO_LgUTacs0
 
 ### Using MLIR
 
+* 2023-12-22: PyDSL, a small subset of Python for constructing affine & transform dialects
+[slides](/OpenMeetings/2023-12-21-PyDSL.pdf)
+[recording](https://youtu.be/nmtHeRkl850)
 * 2023-06-08/15: Update on Numba/MLIR
 [slides](/OpenMeetings/2023-06-08-Numba.pdf)
 [recording](https://youtu.be/ATvH4JOW4tA)
