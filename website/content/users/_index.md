@@ -46,6 +46,31 @@ constantly evolving, aiming to deliver execution on heterogenous architectures w
 The CIRCT project is an (experimental!) effort looking to apply MLIR and the LLVM
 development methodology to the domain of hardware design tools.
 
+## [Concrete](https://github.com/zama-ai/concrete): TFHE Compiler that converts python programs into FHE equivalent
+
+Concrete is an open-source framework that simplifies the use of
+[Fully Homomorphic Encryption](https://fhe.org) (FHE) and makes writing FHE
+programs easy for developers
+
+FHE is a powerful technology that enables computations on encrypted data without
+needing to decrypt it. This capability ensures user privacy and provides robust
+protection against data breaches.
+
+Concrete enables developers to efficiently develop privacy-preserving
+applications for various use cases. For instance,
+[Concrete ML](https://github.com/zama-ai/concrete-ml) is built on top of
+Concrete to integrate privacy-preserving features of FHE into machine learning
+use cases.
+
+## [DSP-MLIR](https://github.com/MPSLab-ASU/DSP_MLIR): A Framework for Digital Signal Processing Applications in MLIR
+
+DSP-MLIR is a framework designed specifically for DSP applications. It provides
+a DSL (Frontend), compiler, and rewrite patterns that detect DSP patterns and
+apply optimizations based on DSP theorems. The framework supports a wide range
+of DSP operations, including filters (FIR, IIR, filter response), transforms
+(DCT, FFT, IFFT), and other signal processing operations such as delay and gain,
+along with additional functionalities for application development. 
+
 ## [Enzyme](https://enzyme.mit.edu): General Automatic Differentiation of MLIR
 Enzyme (specifically EnzymeMLIR) is a first-class automatic differentiation 
 sytem for MLIR. Operations and types implement or inheret general interfaces
@@ -78,6 +103,19 @@ and address its various deficiencies. F18 was subsequently accepted into the LLV
 project and rechristened as Flang. The high level IR of the Fortran compiler is modeled
 using MLIR.
 
+## [HEIR](https://github.com/google/heir)
+
+HEIR (Homomorphic Encryption Intermediate Representation) is an MLIR-based
+toolchain developed by Google for compiling programs that utilize homomorphic
+encryption. Homomorphic encryption allows computations to be performed directly
+on encrypted data without needing to decrypt it first, thereby preserving data
+privacy throughout the computational process.
+
+Building upon the foundation of MLIR (Multi-Level Intermediate Representation),
+HEIR provides a flexible and extensible framework for developing compilers
+targeting homomorphic encryption. This approach facilitates the optimization and
+transformation of code in a manner that is both modular and scalable.
+
 ## [IREE](https://github.com/google/iree)
 
 IREE (pronounced "eerie") is a compiler and minimal runtime system for
@@ -88,7 +126,7 @@ the GPU (via Vulkan/SPIR-V), CPU or some combination. It also aims to
 interoperate seamlessly with existing users of Vulkan APIs, specifically
 focused on games and rendering pipelines.
 
-## [Kokkos](https://kokkos.org):
+## [Kokkos](https://kokkos.org)
 
 The Kokkos C++ Performance Portability Ecosystem is a production level solution 
 for writing modern C++ applications in a hardware agnostic way. It is part of the 
@@ -217,7 +255,7 @@ and the GPU Polygeist paper
 
 Pylir aims to be an optimizing Ahead-of-Time Python Compiler with high language
 conformance. It uses MLIR Dialects for the task of high level, language specific
-optimizations as well as LLVM for code genereation and garbage collector
+optimizations as well as LLVM for code generation and garbage collector
 support.
 
 ## [RISE](https://rise-lang.org/)
@@ -232,10 +270,25 @@ and hardware-specific optimisation choices".
 TPU-MLIR is an open-source machine-learning compiler based on MLIR for
 SOPHGO TPU. https://arxiv.org/abs/2210.15016.
 
+## [Substrait MLIR](https://github.com/substrait-io/substrait-mlir-contrib/)
+
+Substrait MLIR is an input/output dialect for
+[Substrait](https://substrait.io/), the cross-language serialization format of
+database query plans (akin to an intermediate representation/IR for database
+queries).
+
 ## [TensorFlow](https://www.tensorflow.org/mlir)
 
 MLIR is used as a Graph Transformation framework and the foundation for
 building many tools (XLA, TFLite converter, quantization, ...).
+
+## [Tenstorrent MLIR Compiler](https://github.com/tenstorrent/tt-mlir)
+
+tt-mlir is a compiler project aimed at defining MLIR dialects to abstract compute
+on Tenstorrent AI accelerators. It is built on top of the MLIR compiler infrastructure
+and targets TTNN.
+
+For more information on the project, see https://tenstorrent.github.io/tt-mlir/.
 
 ## [TFRT: TensorFlow Runtime](https://github.com/tensorflow/runtime)
 

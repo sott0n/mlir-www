@@ -12,13 +12,10 @@ up with MLIR development.
 
 ## Deprecated
 
-### Use the free function variants for `dyn_cast`/`cast`/`isa`/...
+### Use `matchAndRewrite` instead of `match` / `rewrite`
 
-When casting attributes or type, use the free functions variants, e.g.,
-`dyn_cast<T>(x)`, `isa<T>(x)`, etc. Use of the cast methods variants (e.g.,
-`x.dyn_cast<T>()`) should be avoided in new code as we'll remove these
-methods in the future.
-[Discussion on Discourse](https://discourse.llvm.org/t/preferred-casting-style-going-forward/68443)
+The `match` and `rewrite` functions of `RewritePattern` and `ConversionPattern`
+are deprecated. Use the combined `matchAndRewrite` instead.
 
 ## On-going Refactoring & large changes
 
@@ -93,3 +90,24 @@ support opaque pointers will be necessary.
 ### Removal of `gpu-to-(cubin|hsaco)` in favor of GPU compilation attributes
 
 **Notice: The passes `gpu-to-(cubin|hsaco)` have been removed from the monorepo, use target attributes instead. See the LLVM 17 section on this page for more information.**
+
+## LLVM 20
+
+### Removal of `vector.reshape`
+
+This operation was added back in 2019, and since then, no lowerings or uses have
+been implemented in upstream MLIR or any known downstream projects. Due to this
+lack of use, it was decided that the operation should be removed.
+
+[Discussion on Discourse](https://discourse.llvm.org/t/rfc-should-vector-reshape-be-removed/80478)
+
+## LLVM 21
+
+### Use the free function variants for `dyn_cast`/`cast`/`isa`/...
+
+When casting attributes or type, use the free functions variants, e.g.,
+`dyn_cast<T>(x)`, `isa<T>(x)`, etc. Use of the cast methods variants (e.g.,
+`x.dyn_cast<T>()`) should be avoided in new code as we removed these
+methods in https://github.com/llvm/llvm-project/pull/135556.
+
+[Discussion on Discourse](https://discourse.llvm.org/t/preferred-casting-style-going-forward/68443)
